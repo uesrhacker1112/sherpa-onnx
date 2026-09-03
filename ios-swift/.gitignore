@@ -90,3 +90,7 @@ fastlane/test_output
 
 iOSInjectionProject/
 swiftpm
+
+# Zipformer model files are downloaded during CI, not committed
+SherpaOnnxAsr/SherpaOnnxAsr/*.onnx
+SherpaOnnxAsr/SherpaOnnxAsr/tokens.txt
