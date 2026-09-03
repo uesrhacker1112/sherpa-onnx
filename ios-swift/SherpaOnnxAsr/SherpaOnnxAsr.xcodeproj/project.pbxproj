@@ -15,6 +15,10 @@
 		C984A82829AA196100D74C52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C984A82629AA196100D74C52 /* Main.storyboard */; };
 		C984A82A29AA19AC00D74C52 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C984A82929AA19AC00D74C52 /* Model.swift */; };
 		C984A83C29AA430B00D74C52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C984A83B29AA430B00D74C52 /* ViewController.swift */; };
+		C9A0000129AA5001000001 /* encoder-epoch-99-avg-1.int8.onnx in Resources */ = {isa = PBXBuildFile; fileRef = C9A0001129AA5001000011 /* encoder-epoch-99-avg-1.int8.onnx */; };
+		C9A0000229AA5001000002 /* decoder-epoch-99-avg-1.onnx in Resources */ = {isa = PBXBuildFile; fileRef = C9A0001229AA5001000012 /* decoder-epoch-99-avg-1.onnx */; };
+		C9A0000329AA5001000003 /* joiner-epoch-99-avg-1.int8.onnx in Resources */ = {isa = PBXBuildFile; fileRef = C9A0001329AA5001000013 /* joiner-epoch-99-avg-1.int8.onnx */; };
+		C9A0000429AA5001000004 /* tokens.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9A0001429AA5001000014 /* tokens.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		C984A82729AA196100D74C52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C984A82929AA19AC00D74C52 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C984A83B29AA430B00D74C52 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C9A0001129AA5001000011 /* encoder-epoch-99-avg-1.int8.onnx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "encoder-epoch-99-avg-1.int8.onnx"; sourceTree = "<group>"; };
+		C9A0001229AA5001000012 /* decoder-epoch-99-avg-1.onnx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "decoder-epoch-99-avg-1.onnx"; sourceTree = "<group>"; };
+		C9A0001329AA5001000013 /* joiner-epoch-99-avg-1.int8.onnx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "joiner-epoch-99-avg-1.int8.onnx"; sourceTree = "<group>"; };
+		C9A0001429AA5001000014 /* tokens.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = tokens.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,10 @@
 			children = (
 				C984A83B29AA430B00D74C52 /* ViewController.swift */,
 				C984A82929AA19AC00D74C52 /* Model.swift */,
+				C9A0001129AA5001000011 /* encoder-epoch-99-avg-1.int8.onnx */,
+				C9A0001229AA5001000012 /* decoder-epoch-99-avg-1.onnx */,
+				C9A0001329AA5001000013 /* joiner-epoch-99-avg-1.int8.onnx */,
+				C9A0001429AA5001000014 /* tokens.txt */,
 				C984A7E729A9EEB700D74C52 /* AppDelegate.swift */,
 				C984A7E929A9EEB700D74C52 /* SceneDelegate.swift */,
 				C984A82629AA196100D74C52 /* Main.storyboard */,
@@ -225,6 +237,10 @@
 				C984A82829AA196100D74C52 /* Main.storyboard in Resources */,
 				C984A7F429A9EEB900D74C52 /* LaunchScreen.storyboard in Resources */,
 				C984A7F129A9EEB900D74C52 /* Assets.xcassets in Resources */,
+				C9A0000129AA5001000001 /* encoder-epoch-99-avg-1.int8.onnx in Resources */,
+				C9A0000229AA5001000002 /* decoder-epoch-99-avg-1.onnx in Resources */,
+				C9A0000329AA5001000003 /* joiner-epoch-99-avg-1.int8.onnx in Resources */,
+				C9A0000429AA5001000004 /* tokens.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,7 +608,7 @@
 			repositoryURL = "https://github.com/k2-fsa/sherpa-onnx";
 			requirement = {
 				kind = exactVersion;
-				version = 1.13.7;
+				version = 1.13.6;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
