@@ -24,9 +24,9 @@ func getResource(_ forResource: String, _ ofType: String) -> String {
 /// sherpa-onnx-streaming-zipformer-bilingual-zh-en-2023-02-20 (Bilingual, Chinese + English)
 /// https://k2-fsa.github.io/sherpa/onnx/pretrained_models/zipformer-transducer-models.html
 func getBilingualStreamZhEnZipformer20230220() -> SherpaOnnxOnlineModelConfig {
-  let encoder = getResource("encoder-epoch-99-avg-1", "onnx")
+  let encoder = getResource("encoder-epoch-99-avg-1.int8", "onnx")
   let decoder = getResource("decoder-epoch-99-avg-1", "onnx")
-  let joiner = getResource("joiner-epoch-99-avg-1", "onnx")
+  let joiner = getResource("joiner-epoch-99-avg-1.int8", "onnx")
   let tokens = getResource("tokens", "txt")
 
   return sherpaOnnxOnlineModelConfig(
