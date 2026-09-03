@@ -6,6 +6,22 @@ workflows:
     environment:
       xcode: latest
     scripts:
+      - name: Download Zipformer model
+        script: |
+          set -euo pipefail
+          DEST="$CM_BUILD_DIR/ios-swift/SherpaOnnxAsr/SherpaOnnxAsr"
+          MODEL="sherpa-onnx-streaming-zipformer-bilingual-zh-en-2023-02-20"
+          ARCHIVE="${MODEL}.tar.bz2"
+          URL="https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/${ARCHIVE}"
+          MIRROR="https://ghfast.top/${URL}"
+          wget -c --tries=20 --timeout=30 --waitretry=5 -O "$ARCHIVE" "$MIRROR" || \
+            wget -c --tries=20 --timeout=30 --waitretry=5 -O "$ARCHIVE" "$URL"
+          tar -xjf "$ARCHIVE"
+          cp "$MODEL/encoder-epoch-99-avg-1.int8.onnx" "$DEST/"
+          cp "$MODEL/decoder-epoch-99-avg-1.onnx" "$DEST/"
+          cp "$MODEL/joiner-epoch-99-avg-1.int8.onnx" "$DEST/"
+          cp "$MODEL/tokens.txt" "$DEST/"
+          ls -lh "$DEST"/*.onnx "$DEST"/tokens.txt
       - name: Resolve Swift packages
         script: |
           xcodebuild -resolvePackageDependencies \
